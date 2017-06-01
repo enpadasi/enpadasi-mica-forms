@@ -1,0 +1,268 @@
+[
+  {
+    "type": "help",
+    "helpvalue": "<h3>General</h3>"
+  },
+  {
+    "type": "section",
+    "htmlClass": "row",
+    "items": [
+      {
+        "type": "section",
+        "htmlClass": "col-xs-6",
+        "items": [
+          {
+            "key": "description.controlGroup",
+            "type": "textarea",
+            "rows": 3,
+            "marked": true
+          },
+          {
+            "key": "description.controlTypes",
+            "type": "textarea",
+            "rows": 3,
+            "marked": true
+          }
+        ]
+      },
+      {
+        "type": "section",
+        "htmlClass": "col-xs-6",
+        "items": [
+          {
+            "key": "followUps",
+            "type": "textarea",
+            "rows": 3,
+            "marked": true
+          },
+          {
+            "key": "countriesIso",
+            "type": "obibaCountriesUiSelect",
+            "notitle": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "help",
+    "helpvalue": "<h3>Recruitment</h3>"
+  },
+  {
+    "type": "section",
+    "htmlClass": "row",
+    "items": [
+      {
+        "type": "section",
+        "htmlClass": "col-xs-6",
+        "items": [
+          {
+            "key": "recruitment",
+            "notitle": true,
+            "items": [
+              {
+                "type": "help",
+                "helpvalue": "<h4>Sources of recruitment</h4>"
+              },
+              {
+                "key": "recruitment.dataSources",
+                "description": "t(study_taxonomy.vocabulary.populations-recruitment-dataSources.description)",
+                "notitle": true,
+                "titleMap": [
+                  {
+                    "value": "general_population",
+                    "name": "t(study_taxonomy.vocabulary.populations-recruitment-dataSources.term.general_population.title)"
+                  },
+                  {
+                    "value": "specific_population",
+                    "name": "t(study_taxonomy.vocabulary.populations-recruitment-dataSources.term.specific_population.title)"
+                  },
+                  {
+                    "value": "exist_studies",
+                    "name": "t(study_taxonomy.vocabulary.populations-recruitment-dataSources.term.exist_studies.title)"
+                  },
+                  {
+                    "value": "other",
+                    "name": "t(study_taxonomy.vocabulary.populations-recruitment-dataSources.term.other.title)"
+                  }
+                ]
+              },
+              {
+                "key": "recruitment.info",
+                "rows": 2,
+                "marked": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "section",
+        "htmlClass": "col-xs-6",
+        "items": [
+          {
+            "key": "recruitment",
+            "notitle": true,
+            "items": [
+              {
+                "type": "section",
+                "htmlClass": "hoffset3",
+                "items": [
+                  {
+                    "key": "recruitment.generalPopulationSources",
+                    "description": "t(study_taxonomy.vocabulary.populations-recruitment-generalPopulationSources.description)",
+                    "titleMap": [
+                      {
+                        "value": "volunteer",
+                        "name": "t(study_taxonomy.vocabulary.populations-recruitment-generalPopulationSources.term.volunteer.title)"
+                      },
+                      {
+                        "value": "selected_samples",
+                        "name": "t(study_taxonomy.vocabulary.populations-recruitment-generalPopulationSources.term.selected_samples.title)"
+                      },
+                      {
+                        "value": "random",
+                        "name": "t(study_taxonomy.vocabulary.populations-recruitment-generalPopulationSources.term.random.title)"
+                      }
+                    ],
+                    "condition": "model.recruitment.dataSources.indexOf(\"general_population\")>=0"
+                  },
+                  {
+                    "key": "recruitment.specificPopulationSources",
+                    "description": "t(study_taxonomy.vocabulary.populations-recruitment-specificPopulationSources.description)",
+                    "titleMap": [
+                      {
+                        "value": "clinic_patients",
+                        "name": "t(study_taxonomy.vocabulary.populations-recruitment-specificPopulationSources.term.clinic_patients.title)"
+                      },
+                      {
+                        "value": "specific_association",
+                        "name": "t(study_taxonomy.vocabulary.populations-recruitment-specificPopulationSources.term.specific_association.title)"
+                      },
+                      {
+                        "value": "other",
+                        "name": "t(study_taxonomy.vocabulary.populations-recruitment-specificPopulationSources.term.other.title)"
+                      }
+                    ],
+                    "condition": "model.recruitment.dataSources.indexOf(\"specific_population\")>=0"
+                  },
+                  {
+                    "key": "recruitment.otherSpecificPopulationSource",
+                    "condition": "model.recruitment.specificPopulationSources.indexOf(\"other\")>=0"
+                  },
+                  {
+                    "key": "recruitment.studies",
+                    "add": "t(study.recruitment-sources.add-study)",
+                    "style": {
+                      "add": "btn-info"
+                    },
+                    "items": [
+                      {
+                        "key": "recruitment.studies[]"
+                      }
+                    ],
+                    "condition": "model.recruitment.dataSources.indexOf(\"exist_studies\")>=0"
+                  },
+                  {
+                    "key": "recruitment.otherSource",
+                    "condition": "model.recruitment.dataSources.indexOf(\"other\")>=0"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "section",
+    "htmlClass": "row",
+    "items": [
+      {
+        "type": "section",
+        "htmlClass": "col-xs-6",
+        "items": [
+          {
+            "type": "help",
+            "helpvalue": "<h4>Restrictions</h4>"
+          },
+          {
+            "key": "selectionCriteria.gender",
+            "titleMap": [
+              {
+                "name": "t(global.not-applicable)",
+                "value": null
+              },
+              {
+                "name": "t(study.selection-criteria.gender.men)",
+                "value": "men"
+              },
+              {
+                "name": "t(study.selection-criteria.gender.women)",
+                "value": "women"
+              }
+            ]
+          },
+          {
+            "key": "selectionCriteria.ageMin"
+          },
+          {
+            "key": "selectionCriteria.ageMax"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "help",
+    "helpvalue": "<h3>Participants</h3>"
+  },
+  {
+    "type": "section",
+    "htmlClass": "row",
+    "items": [
+      {
+        "type": "section",
+        "htmlClass": "col-xs-6",
+        "items": [
+          {
+            "key": "recruitment",
+            "notitle": true,
+            "items": [
+              {
+                "type": "help",
+                "helpvalue": "<h4>Number of participants</h4>"
+              },
+              "numberOfParticipants.participant.total",
+              "numberOfParticipants.participant.noLimit",
+              "numberOfParticipants.participant.male",
+              "numberOfParticipants.participant.female",
+              "numberOfParticipants.info"
+            ]
+          }
+        ]
+      },
+      {
+        "type": "section",
+        "htmlClass": "col-xs-6",
+        "items": [
+          {
+            "key": "recruitment",
+            "notitle": true,
+            "items": [
+              {
+                "type": "help",
+                "helpvalue": "<h4>Number of participants with biological samples</h4>"
+              },
+              "numberOfParticipants.sample.total",
+              "numberOfParticipants.sample.noLimit",
+              "numberOfParticipants.sample.male",
+              "numberOfParticipants.sample.female"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]
