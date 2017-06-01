@@ -1,0 +1,465 @@
+{
+  "type": "object",
+  "properties": {
+    "website": {
+      "title": "Website",
+      "type": "string"
+    },
+    "funding": {
+      "type": "string",
+      "title": "Funding"
+    },
+    "dataSharingPolicy": {
+      "type": "object",
+      "title": "Data sharing policy",
+      "properties": {
+        "studyStatus": {
+          "type": "object",
+          "title": "",
+          "properties": {
+            "ongoing": {
+              "type": "boolean",
+              "title": "on-going",
+              "description": "Is the study still on-going?"
+            },
+            "dataAvailability": {
+              "type": "string",
+              "title": "Data availability",
+              "description": "When will the data be available?"
+            }
+          }
+        },
+        "data": {
+          "type": "string",
+          "title": "Data",
+          "enum": [
+            "public",
+            "request",
+            "private"
+          ]
+        },
+        "aggregateData": {
+          "type": "string",
+          "title": "Aggregate data",
+          "enum": [
+            "public",
+            "request",
+            "private"
+          ]
+        },
+        "metadata": {
+          "type": "string",
+          "title": "Meta-data",
+          "enum": [
+            "public",
+            "request",
+            "private"
+          ]
+        },
+        "analysisPermission": {
+          "type": "string",
+          "title": "Data analysis permission",
+          "enum": [
+            "public",
+            "request",
+            "private"
+          ]
+        }
+      }
+    },
+    "description": {
+      "type": "string",
+      "title": "Description"
+    },
+    "additionalNutricionalInformation": {
+      "type": "string",
+      "title": "Additional nutricional information"
+    },
+    "representativeness": {
+      "type": "string",
+      "title": "Representativeness",
+      "enum": [
+        "national",
+        "subnational"
+      ]
+    },
+    "sampling": {
+      "type": "object",
+      "title": "Sampling",
+      "properties": {
+        "type": {
+          "type": "string",
+          "title": "Sampling type",
+          "enum": [
+            "probabilistic",
+            "non_probabilistic"
+          ]
+        },
+        "probabilistic": {
+          "type": "string",
+          "title": "Probabilistic sampling type",
+          "enum": [
+            "simple_random",
+            "stratified_random",
+            "multi_stage"
+          ]
+        },
+        "nonProbabilistic": {
+          "type": "string",
+          "title": "Non probabilistic sampling type",
+          "enum": [
+            "voluntary_response",
+            "judgement",
+            "convenience",
+            "other"
+          ]
+        },
+        "otherNonProbabilistic": {
+          "type": "string",
+          "title": "Other non probabilistic sampling",
+          "description": "Describe the other non probabilistic sampling type."
+        }
+      }
+    },
+    "studyDesign": {
+      "type": "object",
+      "title": "Design",
+      "properties": {
+        "design": {
+          "type": "string",
+          "title": "Design",
+          "enum": [
+            "cohort",
+            "cross_sectional",
+            "case_control",
+            "seroepidemiologic",
+            "other"
+          ]
+        },
+        "otherDesign": {
+          "type": "string",
+          "title": "t(study.other-design)",
+          "description": "Describe the other design."
+        }
+      }
+    },
+    "participants": {
+      "type": "object",
+      "x-schema-form": {
+        "notitle": true
+      },
+      "properties": {
+        "participant": {
+          "type": "object",
+          "properties": {
+            "total": {
+              "type": "number",
+              "title": "Total number of participants"
+            },
+            "noLimit": {
+              "type": "boolean",
+              "title": "t(numberOfParticipants.no-limit)"
+            },
+            "male": {
+              "type": "number",
+              "title": "Number of male participants"
+            },
+            "female": {
+              "type": "number",
+              "title": "Number of female participants"
+            }
+          },
+          "x-schema-form": {
+            "notitle": true
+          }
+        },
+        "sample": {
+          "type": "object",
+          "properties": {
+            "total": {
+              "type": "number",
+              "title": "Total number of participants with biological samples"
+            },
+            "noLimit": {
+              "type": "boolean",
+              "title": "t(numberOfParticipants.no-limit)"
+            },
+            "male": {
+              "type": "number",
+              "title": "Number of male participants with biological samples"
+            },
+            "female": {
+              "type": "number",
+              "title": "Number of female participants with biological samples"
+            }
+          },
+          "x-schema-form": {
+            "notitle": true
+          }
+        },
+        "info": {
+          "type": "string",
+          "title": "t(numberOfParticipants.suppl-info)"
+        },
+        "ageMin": {
+          "type": "number",
+          "title": "Minimum age"
+        },
+        "ageMax": {
+          "type": "number",
+          "title": "Maximum age"
+        }
+      }
+    },
+    "startYear": {
+      "type": "integer",
+      "title": "Start year"
+    },
+    "endYear": {
+      "type": "integer",
+      "title": "End year"
+    },
+    "assay": {
+      "type": "object",
+      "properties": {
+        "reference": {
+          "type": "string",
+          "title": "Reference",
+          "description": "Reference of the Main Food composition Table used (or URL)."
+        },
+        "foodTypes": {
+          "type": "array",
+          "title": "Types of food",
+          "items": {
+            "type": "string",
+            "enum": [
+              "food",
+              "drinks",
+              "dietary_supplements"
+            ]
+          }
+        },
+        "anthropometry": {
+          "type": "array",
+          "title": "Anthropometry",
+          "items": {
+            "type": "string",
+            "enum": [
+              "weight",
+              "height",
+              "waist_circumference",
+              "bmi_status",
+              "body_fat"
+            ]
+          }
+        },
+        "omics": {
+          "type": "array",
+          "title": "Types of omics",
+          "items": {
+            "type": "string",
+            "enum": [
+              "biomarkers",
+              "metabolomics",
+              "genomics",
+              "proteomics",
+              "transcriptomics"
+            ]
+          }
+        },
+        "tobaccoUsage": {
+          "type": "boolean",
+          "title": "tobacco usage",
+          "description": "Tobacco usage data available."
+        },
+        "alcoholConsumption": {
+          "type": "boolean",
+          "title": "alcohol consumption",
+          "description": "Alcohol consumption usage data available."
+        },
+        "socioDemographicInformation": {
+          "type": "boolean",
+          "title": "socio-demographic information",
+          "description": "Socio-demographic information available."
+        },
+        "fasten": {
+          "type": "boolean",
+          "title": "fasten",
+          "description": "Fasten data available."
+        },
+        "outcomes": {
+          "type": "string",
+          "title": "Study outcomes",
+          "description": "Study outcomes and time points of assessment: health outcomes."
+        },
+        "timePoints": {
+          "type": "string",
+          "title": "Relative time points",
+          "description": "Relative time points of sampling event."
+        },
+        "measurement": {
+          "type": "string",
+          "title": "Measurement",
+          "description": "Measurement (i.e. metabolite profiling)."
+        },
+        "technologies": {
+          "type": "string",
+          "title": "Technologies",
+          "description": "Technologies (i.e. mass spectrometry, chromatography)."
+        },
+        "assessment": {
+          "type": "object",
+          "properties": {
+            "methods": {
+              "type": "array",
+              "title": "Dietary or nutritional assessment methods",
+              "description": "Methods for dietary or nutritional assessment.",
+              "items": {
+                "type": "string",
+                "enum": [
+                  "dietary_records",
+                  "24_hour_recall",
+                  "screener",
+                  "diet_history",
+                  "other"
+                ]
+              }
+            },
+            "screener": {
+              "type": "string",
+              "title": "Screener types",
+              "enum": [
+                "qualitative",
+                "semi_quantitative",
+                "quantitative"
+              ]
+            },
+            "other": {
+              "type": "string",
+              "title": "Other assessment methods"
+            }
+          }
+        },
+        "foodIntake": {
+          "type": "object",
+          "properties": {
+            "measurements": {
+              "type": "array",
+              "title": "Nutrient and food intake data",
+              "description": "Nutrient and food intake data measurement types.",
+              "items": {
+                "type": "string",
+                "enum": [
+                  "unadjusted",
+                  "adjusted",
+                  "estimate",
+                  "other"
+                ]
+              }
+            },
+            "adjusted": {
+              "type": "string",
+              "title": "Adjustment method",
+              "description": "Adjustment method for total energy intake.",
+              "enum": [
+                "density",
+                "residual"
+              ]
+            },
+            "other": {
+              "type": "string",
+              "title": "Other measurment method"
+            }
+          }
+        },
+        "physicalActivity": {
+          "type": "object",
+          "properties": {
+            "measurement": {
+              "type": "string",
+              "title": "Physical activity",
+              "description": "Physical activity measurements.",
+              "enum": [
+                "objective",
+                "subjective"
+              ]
+            },
+            "objective": {
+              "type": "string",
+              "title": "Objective measurement information",
+              "description": "Name of the tool, provider, version, year of the version."
+            },
+            "subjective": {
+              "type": "string",
+              "title": "Subjective measurement information",
+              "description": "Name of the questionnaire, provider, version, year of the version."
+            }
+          }
+        },
+        "samples": {
+          "type": "object",
+          "properties": {
+            "types": {
+              "type": "array",
+              "title": "Types of biological samples",
+              "description": "The types of biological samples.",
+              "items": {
+                "type": "string",
+                "enum": [
+                  "whole_blood",
+                  "serum",
+                  "plasma",
+                  "urine",
+                  "saliva",
+                  "faeces",
+                  "other"
+                ]
+              }
+            },
+            "whole_blood": {
+              "type": "number",
+              "title": "The number of whole blood samples",
+              "description": "The number of whole blood samples."
+            },
+            "serum": {
+              "type": "number",
+              "title": "The number of serum samples",
+              "description": "The number of serum samples."
+            },
+            "plasma": {
+              "type": "number",
+              "title": "The number of plasma samples",
+              "description": "The number of plasma samples."
+            },
+            "urine": {
+              "type": "number",
+              "title": "The number of urine samples",
+              "description": "The number of urine samples."
+            },
+            "saliva": {
+              "type": "number",
+              "title": "The number of saliva samples",
+              "description": "The number of saliva samples."
+            },
+            "faeces": {
+              "type": "number",
+              "title": "The number of faeces samples",
+              "description": "The number of faeces samples."
+            },
+            "otherDescription": {
+              "type": "string",
+              "title": "Other sample types",
+              "description": "Describe the other sample types."
+            },
+            "other": {
+              "type": "number",
+              "title": "The number of other samples",
+              "description": "The number of other samples."
+            }
+          }
+        }
+      }
+    }
+  },
+  "required": []
+}
