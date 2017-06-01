@@ -1,0 +1,853 @@
+[
+  {
+    "type": "help",
+    "helpvalue": "<h2>Investigation</h2>"
+  },
+  {
+    "type": "help",
+    "helpvalue": "<h3>General</h3>"
+  },
+  {
+    "type": "section",
+    "htmlClass": "row",
+    "items": [
+      {
+        "type": "section",
+        "htmlClass": "col-xs-6",
+        "items": [
+          "website"
+        ]
+      },
+      {
+        "type": "section",
+        "htmlClass": "col-xs-6",
+        "items": [
+          "funding"
+        ]
+      }
+    ]
+  },
+  {
+    "type": "section",
+    "htmlClass": "row",
+    "items": [
+      {
+        "type": "section",
+        "htmlClass": "col-xs-6",
+        "items": [
+          "startYear"
+        ]
+      },
+      {
+        "type": "section",
+        "htmlClass": "col-xs-6",
+        "items": [
+          "endYear"
+        ]
+      }
+    ]
+  },
+  {
+    "type": "help",
+    "helpvalue": "<h3>Data sharing policy</h3>"
+  },
+  {
+    "type": "section",
+    "htmlClass": "row",
+    "items": [
+      {
+        "type": "section",
+        "htmlClass": "col-xs-6",
+        "items": [
+          {
+            "key": "dataSharingPolicy",
+            "notitle": true,
+            "items": [
+              {
+                "key": "dataSharingPolicy.studyStatus.ongoing"
+              },
+              {
+                "type": "section",
+                "htmlClass": "hoffset3",
+                "items": [
+                  {
+                    "key": "dataSharingPolicy.studyStatus.dataAvailability",
+                    "condition": "model.dataSharingPolicy.studyStatus.ongoing==true"
+                  }
+                ]
+              },
+              {
+                "key": "dataSharingPolicy.data",
+                "notitle": false,
+                "type": "radios",
+                "description": "The data sharing policy.",
+                "titleMap": [
+                  {
+                    "value": "public",
+                    "name": "publicly accessible"
+                  },
+                  {
+                    "value": "request",
+                    "name": "upon request"
+                  },
+                  {
+                    "value": "private",
+                    "name": "not publicly accessible"
+                  }
+                ]
+              },
+              {
+                "key": "dataSharingPolicy.aggregateData",
+                "notitle": false,
+                "type": "radios",
+                "description": "The aggregate data sharing policy (i.e. descriptive statistics).",
+                "titleMap": [
+                  {
+                    "value": "public",
+                    "name": "publicly accessible"
+                  },
+                  {
+                    "value": "request",
+                    "name": "upon request"
+                  },
+                  {
+                    "value": "private",
+                    "name": "not publicly accessible"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "section",
+        "htmlClass": "col-xs-6",
+        "items": [
+          {
+            "key": "dataSharingPolicy",
+            "notitle": true,
+            "items": [
+              {
+                "key": "dataSharingPolicy.metadata",
+                "notitle": false,
+                "type": "radios",
+                "description": "The study meta-data sharing policy.",
+                "titleMap": [
+                  {
+                    "value": "public",
+                    "name": "publicly accessible"
+                  },
+                  {
+                    "value": "request",
+                    "name": "upon request"
+                  },
+                  {
+                    "value": "private",
+                    "name": "not publicly accessible"
+                  }
+                ]
+              },
+              {
+                "key": "dataSharingPolicy.analysisPermission",
+                "notitle": false,
+                "type": "radios",
+                "description": "The data analysis sharing policy.",
+                "titleMap": [
+                  {
+                    "value": "public",
+                    "name": "publicly accessible"
+                  },
+                  {
+                    "value": "request",
+                    "name": "upon request"
+                  },
+                  {
+                    "value": "private",
+                    "name": "not publicly accessible"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "help",
+    "helpvalue": "<h2>Study</h2>"
+  },
+  {
+    "type": "section",
+    "htmlClass": "row",
+    "items": [
+      {
+        "type": "section",
+        "htmlClass": "col-xs-6",
+        "items": [
+          {
+            "type": "help",
+            "helpvalue": "<h3>General</h3>"
+          },
+          {
+            "key": "description",
+            "type": "textarea",
+            "rows": 3,
+            "marked": true
+          },
+          {
+            "key": "additionalNutricionalInformation",
+            "type": "textarea",
+            "rows": 3,
+            "marked": true
+          },
+          {
+            "key": "representativeness",
+            "notitle": false,
+            "type": "radios",
+            "description": "The representativeness.",
+            "titleMap": [
+              {
+                "value": "national",
+                "name": "National level (nationally representative)"
+              },
+              {
+                "value": "subnational",
+                "name": "Subnational level (covers multiple communities (i.e. >3 cities, > 5 villages, or one or more provinces or states)"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "section",
+        "htmlClass": "col-xs-6",
+        "items": [
+          {
+            "key": "sampling",
+            "notitle": true,
+            "items": [
+              {
+                "type": "help",
+                "helpvalue": "<h3>Sampling</h3>"
+              },
+              {
+                "key": "sampling.type",
+                "notitle": true,
+                "type": "radios",
+                "description": "The sampling type.",
+                "titleMap": [
+                  {
+                    "value": "probabilistic",
+                    "name": "probabilistic"
+                  },
+                  {
+                    "value": "non_probabilistic",
+                    "name": "non-probabilistic"
+                  }
+                ]
+              },
+              {
+                "type": "section",
+                "htmlClass": "hoffset3",
+                "items": [
+                  {
+                    "key": "sampling.probabilistic",
+                    "notitle": false,
+                    "type": "radios",
+                    "condition": "model.sampling.type==\"probabilistic\"",
+                    "titleMap": [
+                      {
+                        "value": "simple_random",
+                        "name": "simple random sampling"
+                      },
+                      {
+                        "value": "stratified_random",
+                        "name": "stratified random sampling"
+                      },
+                      {
+                        "value": "multi_stage",
+                        "name": "multi-stage sampling"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "section",
+                "htmlClass": "hoffset3",
+                "items": [
+                  {
+                    "key": "sampling.nonProbabilistic",
+                    "notitle": false,
+                    "type": "radios",
+                    "condition": "model.sampling.type==\"non_probabilistic\"",
+                    "titleMap": [
+                      {
+                        "value": "voluntary_response",
+                        "name": "voluntary response sampling"
+                      },
+                      {
+                        "value": "judgement",
+                        "name": "judgement sampling "
+                      },
+                      {
+                        "value": "convenience",
+                        "name": "convenience sampling"
+                      },
+                      {
+                        "value": "other",
+                        "name": "other"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "section",
+                "htmlClass": "hoffset3",
+                "items": [
+                  {
+                    "key": "sampling.otherNonProbabilistic",
+                    "condition": "model.sampling.nonProbabilistic==\"other\""
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "key": "studyDesign",
+            "notitle": true,
+            "items": [
+              {
+                "type": "help",
+                "helpvalue": "<h3>Design</h3>"
+              },
+              {
+                "key": "studyDesign.design",
+                "notitle": true,
+                "type": "radios",
+                "description": "The design of an observational or experimental study.",
+                "titleMap": [
+                  {
+                    "value": "cohort",
+                    "name": "cohort"
+                  },
+                  {
+                    "value": "cross_sectional",
+                    "name": "cross sectional"
+                  },
+                  {
+                    "value": "case_control",
+                    "name": "case-control"
+                  },
+                  {
+                    "value": "seroepidemiologic",
+                    "name": "seroepidemiologic study"
+                  },
+                  {
+                    "value": "other",
+                    "name": "other"
+                  }
+                ]
+              },
+              {
+                "type": "section",
+                "htmlClass": "hoffset3",
+                "items": [
+                  {
+                    "key": "studyDesign.otherDesign",
+                    "condition": "model.studyDesign.design==\"other\""
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "help",
+    "helpvalue": "<h3>Participants</h3>"
+  },
+  {
+    "type": "section",
+    "htmlClass": "row",
+    "items": [
+      {
+        "type": "section",
+        "htmlClass": "col-xs-6",
+        "items": [
+          {
+            "type": "help",
+            "helpvalue": "<h4>Number of participants</h4>"
+          },
+          "participants.participant.total",
+          "participants.participant.noLimit",
+          "participants.participant.male",
+          "participants.participant.female",
+          "participants.info",
+          {
+            "key": "participants.ageMin"
+          },
+          {
+            "key": "participants.ageMax"
+          }
+        ]
+      },
+      {
+        "type": "section",
+        "htmlClass": "col-xs-6",
+        "items": [
+          {
+            "type": "help",
+            "helpvalue": "<h4>Number of participants with biological samples</h4>"
+          },
+          "participants.sample.total",
+          "participants.sample.noLimit",
+          "participants.sample.male",
+          "participants.sample.female"
+        ]
+      }
+    ]
+  },
+  {
+    "type": "help",
+    "helpvalue": "<h2>Assay</h2>"
+  },
+  {
+    "type": "help",
+    "helpvalue": "<h3>General</h3>"
+  },
+  {
+    "type": "section",
+    "htmlClass": "row",
+    "items": [
+      {
+        "type": "section",
+        "htmlClass": "col-xs-6",
+        "items": [
+          {
+            "key": "assay.foodTypes",
+            "description": "The types of food assessed.",
+            "titleMap": [
+              {
+                "value": "food",
+                "name": "food"
+              },
+              {
+                "value": "drinks",
+                "name": "drinks"
+              },
+              {
+                "value": "dietary_supplements",
+                "name": "dietary supplements"
+              }
+            ]
+          },
+          {
+            "key": "assay.anthropometry",
+            "description": "The anthropometry measurements.",
+            "titleMap": [
+              {
+                "value": "weight",
+                "name": "weight"
+              },
+              {
+                "value": "height",
+                "name": "height"
+              },
+              {
+                "value": "waist_circumference",
+                "name": "waist circumference"
+              },
+              {
+                "value": "bmi_status",
+                "name": "BMI status (categories)"
+              },
+              {
+                "value": "body_fat",
+                "name": "% body fat"
+              }
+            ]
+          },
+          {
+            "key": "assay.omics",
+            "description": "The types of omics used.",
+            "titleMap": [
+              {
+                "value": "biomarkers",
+                "name": "biomarkers"
+              },
+              {
+                "value": "metabolomics",
+                "name": "metabolomics"
+              },
+              {
+                "value": "genomics",
+                "name": "genomics"
+              },
+              {
+                "value": "proteomics",
+                "name": "proteomics"
+              },
+              {
+                "value": "transcriptomics",
+                "name": "transcriptomics"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "section",
+        "htmlClass": "col-xs-6",
+        "items": [
+          {
+            "key": "assay.reference",
+            "type": "string"
+          },
+          {
+            "key": "assay.tobaccoUsage"
+          },
+          {
+            "key": "assay.alcoholConsumption"
+          },
+          {
+            "key": "assay.socioDemographicInformation"
+          },
+          {
+            "key": "assay.fasten"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "section",
+    "htmlClass": "row",
+    "items": [
+      {
+        "type": "section",
+        "htmlClass": "col-xs-6",
+        "items": [
+          {
+            "key": "assay.outcomes",
+            "type": "textarea"
+          },
+          {
+            "key": "assay.timePoints",
+            "type": "textarea"
+          }
+        ]
+      },
+      {
+        "type": "section",
+        "htmlClass": "col-xs-6",
+        "items": [
+          {
+            "key": "assay.measurement",
+            "type": "textarea"
+          },
+          {
+            "key": "assay.technologies",
+            "type": "textarea"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "help",
+    "helpvalue": "<h3>Assessment</h3>"
+  },
+  {
+    "type": "section",
+    "htmlClass": "row",
+    "items": [
+      {
+        "type": "section",
+        "htmlClass": "col-xs-6",
+        "items": [
+          {
+            "key": "assay.assessment.methods",
+            "notitle": true,
+            "titleMap": [
+              {
+                "value": "dietary_records",
+                "name": "dietary records (innovative alternatives: PDA-technologies, Mobile phone-based technologies, Camera- and tape-recorder–based technologies)"
+              },
+              {
+                "value": "24_hour_recall",
+                "name": "24-Hour Recall (innovative alternatives: Interactive computer-based technologies, web-based)"
+              },
+              {
+                "value": "screener",
+                "name": "screener/Food Frequency Questionnaire (innovative alternatives: Interactive computer-based technologies, web-based)"
+              },
+              {
+                "value": "diet_history",
+                "name": "diet history"
+              },
+              {
+                "value": "other",
+                "name": "other"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "section",
+        "htmlClass": "col-xs-6",
+        "items": [
+          {
+            "type": "section",
+            "htmlClass": "hoffset3",
+            "items": [
+              {
+                "key": "assay.assessment.screener",
+                "type": "radios",
+                "condition": "model.assay.assessment.methods.indexOf(\"screener\")>=0",
+                "titleMap": [
+                  {
+                    "value": "qualitative",
+                    "name": "qualitative (only frequency)"
+                  },
+                  {
+                    "value": "semi_quantitative",
+                    "name": "semi-quantitative"
+                  },
+                  {
+                    "value": "quantitative",
+                    "name": "quantitative"
+                  }
+                ]
+              },
+              {
+                "key": "assay.assessment.other",
+                "condition": "model.assay.assessment.methods.indexOf(\"other\")>=0"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "help",
+    "helpvalue": "<h3>Nutrient and food intake data</h3>"
+  },
+  {
+    "type": "section",
+    "htmlClass": "row",
+    "items": [
+      {
+        "type": "section",
+        "htmlClass": "col-xs-6",
+        "items": [
+          {
+            "key": "assay.foodIntake.measurements",
+            "notitle": true,
+            "titleMap": [
+              {
+                "value": "unadjusted",
+                "name": "unadjusted"
+              },
+              {
+                "value": "adjusted",
+                "name": "adjusted for total energy intake"
+              },
+              {
+                "value": "estimate",
+                "name": "estimates of usual intake from short-term measurements"
+              },
+              {
+                "value": "other",
+                "name": "other"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "section",
+        "htmlClass": "col-xs-6",
+        "items": [
+          {
+            "type": "section",
+            "htmlClass": "hoffset3",
+            "items": [
+              {
+                "key": "assay.foodIntake.adjusted",
+                "type": "radios",
+                "condition": "model.assay.foodIntake.measurements.indexOf(\"adjusted\")>=0",
+                "titleMap": [
+                  {
+                    "value": "density",
+                    "name": "density method"
+                  },
+                  {
+                    "value": "residual",
+                    "name": "residual method"
+                  }
+                ]
+              },
+              {
+                "key": "assay.foodIntake.other",
+                "condition": "model.assay.foodIntake.measurements.indexOf(\"other\")>=0"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "help",
+    "helpvalue": "<h3>Physical activity</h3>"
+  },
+  {
+    "type": "section",
+    "htmlClass": "row",
+    "items": [
+      {
+        "type": "section",
+        "htmlClass": "col-xs-6",
+        "items": [
+          {
+            "key": "assay.physicalActivity.measurement",
+            "notitle": true,
+            "type": "radios",
+            "titleMap": [
+              {
+                "value": "objective",
+                "name": "objective"
+              },
+              {
+                "value": "subjective",
+                "name": "subjective"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "section",
+        "htmlClass": "col-xs-6",
+        "items": [
+          {
+            "type": "section",
+            "htmlClass": "hoffset3",
+            "items": [
+              {
+                "key": "assay.physicalActivity.objective",
+                "condition": "model.assay.physicalActivity.measurement==\"objective\""
+              },
+              {
+                "key": "assay.physicalActivity.subjective",
+                "condition": "model.assay.physicalActivity.measurement==\"subjective\""
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "help",
+    "helpvalue": "<h3>Types of biological samples</h3>"
+  },
+  {
+    "type": "section",
+    "htmlClass": "row",
+    "items": [
+      {
+        "type": "section",
+        "htmlClass": "col-xs-6",
+        "items": [
+          {
+            "key": "assay.samples.types",
+            "notitle": true,
+            "titleMap": [
+              {
+                "value": "whole_blood",
+                "name": "whole blood"
+              },
+              {
+                "value": "serum",
+                "name": "serum"
+              },
+              {
+                "value": "plasma",
+                "name": "plasma"
+              },
+              {
+                "value": "urine",
+                "name": "urine"
+              },
+              {
+                "value": "saliva",
+                "name": "saliva"
+              },
+              {
+                "value": "faeces",
+                "name": "faeces"
+              },
+              {
+                "value": "other",
+                "name": "other"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "section",
+        "htmlClass": "col-xs-6",
+        "items": [
+          {
+            "type": "section",
+            "htmlClass": "hoffset3",
+            "items": [
+              {
+                "key": "assay.samples.whole_blood",
+                "condition": "model.assay.samples.types.indexOf(\"whole_blood\")>=0"
+              },
+              {
+                "key": "assay.samples.serum",
+                "condition": "model.assay.samples.types.indexOf(\"serum\")>=0"
+              },
+              {
+                "key": "assay.samples.plasma",
+                "condition": "model.assay.samples.types.indexOf(\"plasma\")>=0"
+              },
+              {
+                "key": "assay.samples.urine",
+                "condition": "model.assay.samples.types.indexOf(\"urine\")>=0"
+              },
+              {
+                "key": "assay.samples.saliva",
+                "condition": "model.assay.samples.types.indexOf(\"saliva\")>=0"
+              },
+              {
+                "key": "assay.samples.faeces",
+                "condition": "model.assay.samples.types.indexOf(\"faeces\")>=0"
+              },
+              {
+                "key": "assay.samples.otherDescription",
+                "condition": "model.assay.samples.types.indexOf(\"other\")>=0"
+              },
+              {
+                "key": "assay.samples.other",
+                "condition": "model.assay.samples.types.indexOf(\"other\")>=0"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]
