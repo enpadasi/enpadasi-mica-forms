@@ -9,6 +9,14 @@
       "type": "string",
       "title": "Funding"
     },
+    "markerPaper": {
+      "type": "string",
+      "title": "Marker paper"
+    },
+    "pubmedId": {
+      "type": "string",
+      "title": "Pubmed ID"
+    },
     "dataSharingPolicy": {
       "type": "object",
       "title": "Data sharing policy",
@@ -299,12 +307,12 @@
         },
         "measurement": {
           "type": "string",
-          "title": "Measurement",
+          "title": "Measurement (omic)",
           "description": "Measurement (i.e. metabolite profiling)."
         },
         "technologies": {
           "type": "string",
-          "title": "Technologies",
+          "title": "Technologies (omic)",
           "description": "Technologies (i.e. mass spectrometry, chromatography)."
         },
         "assessment": {
@@ -344,18 +352,15 @@
           "type": "object",
           "properties": {
             "measurements": {
-              "type": "array",
+              "type": "string",
               "title": "Nutrient and food intake data",
               "description": "Nutrient and food intake data measurement types.",
-              "items": {
-                "type": "string",
-                "enum": [
-                  "unadjusted",
-                  "adjusted",
-                  "estimate",
-                  "other"
-                ]
-              }
+              "enum": [
+                "unadjusted",
+                "adjusted",
+                "estimate",
+                "other"
+              ]
             },
             "adjusted": {
               "type": "string",
@@ -401,7 +406,7 @@
           "properties": {
             "types": {
               "type": "array",
-              "title": "Types of biological samples",
+              "title": "Types of biological samples and number of donors for each sample type",
               "description": "The types of biological samples.",
               "items": {
                 "type": "string",
