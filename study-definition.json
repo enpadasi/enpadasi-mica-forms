@@ -15,14 +15,20 @@
         "type": "section",
         "htmlClass": "col-xs-6",
         "items": [
-          "website"
+          "website",
+          "funding"
         ]
       },
       {
         "type": "section",
         "htmlClass": "col-xs-6",
         "items": [
-          "funding"
+          {
+            "key": "markerPaper",
+            "type": "textarea",
+            "notitle": false
+          },
+          "pubmedId"
         ]
       }
     ]
@@ -651,6 +657,7 @@
           {
             "key": "assay.foodIntake.measurements",
             "notitle": true,
+            "type": "radios",
             "titleMap": [
               {
                 "value": "unadjusted",
@@ -683,7 +690,7 @@
               {
                 "key": "assay.foodIntake.adjusted",
                 "type": "radios",
-                "condition": "model.assay.foodIntake.measurements.indexOf(\"adjusted\")>=0",
+                "condition": "model.assay.foodIntake.measurements==\"adjusted\"",
                 "titleMap": [
                   {
                     "value": "density",
@@ -697,7 +704,7 @@
               },
               {
                 "key": "assay.foodIntake.other",
-                "condition": "model.assay.foodIntake.measurements.indexOf(\"other\")>=0"
+                "condition": "model.assay.foodIntake.measurements==\"other\""
               }
             ]
           }
