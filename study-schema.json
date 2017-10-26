@@ -81,7 +81,7 @@
     },
     "additionalNutricionalInformation": {
       "type": "string",
-      "title": "Additional nutricional information"
+      "title": "Additional nutritional information"
     },
     "representativeness": {
       "type": "string",
@@ -380,14 +380,17 @@
         "physicalActivity": {
           "type": "object",
           "properties": {
-            "measurement": {
-              "type": "string",
+            "types": {
+              "type": "array",
               "title": "Physical activity",
               "description": "Physical activity measurements.",
-              "enum": [
-                "objective",
-                "subjective"
-              ]
+              "items": {
+                "type": "string",
+                "enum": [
+                  "objective",
+                  "subjective"
+                ]
+              }
             },
             "objective": {
               "type": "string",

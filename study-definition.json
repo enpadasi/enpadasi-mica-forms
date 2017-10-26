@@ -725,9 +725,8 @@
         "htmlClass": "col-xs-6",
         "items": [
           {
-            "key": "assay.physicalActivity.measurement",
+            "key": "assay.physicalActivity.types",
             "notitle": true,
-            "type": "radios",
             "titleMap": [
               {
                 "value": "objective",
@@ -751,11 +750,11 @@
             "items": [
               {
                 "key": "assay.physicalActivity.objective",
-                "condition": "model.assay.physicalActivity.measurement==\"objective\""
+                "condition": "model.assay.physicalActivity.types.indexOf(\"objective\")>=0"
               },
               {
                 "key": "assay.physicalActivity.subjective",
-                "condition": "model.assay.physicalActivity.measurement==\"subjective\""
+                "condition": "model.assay.physicalActivity.types.indexOf(\"subjective\")>=0"
               }
             ]
           }
