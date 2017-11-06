@@ -338,15 +338,15 @@
                 "titleMap": [
                   {
                     "value": "cohort",
-                    "name": "cohort"
+                    "name": "Cohort study"
                   },
                   {
                     "value": "cross_sectional",
-                    "name": "cross sectional"
+                    "name": "Cross-sectional study"
                   },
                   {
                     "value": "case_control",
-                    "name": "case-control"
+                    "name": "Case-control study"
                   },
                   {
                     "value": "seroepidemiologic",
@@ -362,6 +362,128 @@
                 "type": "section",
                 "htmlClass": "hoffset3",
                 "items": [
+                  {
+                    "key": "studyDesign.ResponseRateQAT",
+                    "condition": "model.studyDesign.design==(\"case_control\")"
+                  },
+                  {
+                    "key": "studyDesign.ResponseRateQAT",
+                    "condition": "model.studyDesign.design==(\"cross_sectional\")"
+                  },
+                  {
+                    "key": "studyDesign.ResponseRateQAT",
+                    "condition": "model.studyDesign.design==(\"cohort\")"
+                  },
+                  {
+                    "key": "studyDesign.ResponseRateQATFillin",
+                    "condition": "model.ResponseRateQAT.design==(\"Response rate\")"
+                  },
+                  {
+                    "key": "studyDesign.CooperationRateFillin",
+                    "condition": "model.ResponseRateQAT.design==(\"Cooperation rate\")"
+                  },
+                  {
+                    "key": "studyDesign.CovariatesAndConfoundingFactorsQAT",
+                    "condition": "model.studyDesign.design==(\"case_control\")"
+                  },
+                  {
+                    "key": "studyDesign.CovariatesAndConfoundingFactorsQAT",
+                    "condition": "model.studyDesign.design==(\"cross_sectional\")"
+                  },
+                  {
+                    "key": "studyDesign.CovariatesAndConfoundingFactorsQAT",
+                    "condition": "model.studyDesign.design==(\"cohort\")"
+                  },
+                  {
+                    "key": "studyDesign.ConfirmedDiagnosisQAT",
+                    "condition": "model.studyDesign.design==(\"case_control\")"
+                  },
+                  {
+                    "key": "studyDesign.ConfirmedDiagnosisQAT",
+                    "condition": "model.studyDesign.design==(\"cross_sectional\")"
+                  },
+                  {
+                    "key": "studyDesign.ConfirmedDiagnosisQAT",
+                    "condition": "model.studyDesign.design==(\"cohort\")"
+                  },
+                  {
+                    "key": "studyDesign.DiagnosisMethodQAT",
+                    "condition": "model.ConfirmedDiagnosisQAT.design==(\"Yes, method used for confirming diagnosis\")"
+                  },
+                  {
+                    "key": "studyDesign.PercentageOfMissingDataExposureQAT",
+                    "condition": "model.studyDesign.design==(\"case_control\")"
+                  },
+                  {
+                    "key": "studyDesign.PercentageOfMissingDataExposureQAT",
+                    "condition": "model.studyDesign.design==(\"cross_sectional\")"
+                  },
+                  {
+                    "key": "studyDesign.PercentageOfMissingDataExposureQAT",
+                    "condition": "model.studyDesign.design==(\"cohort\")"
+                  },
+                  {
+                    "key": "studyDesign.PercentageOfMissingDataOutcomeQAT",
+                    "condition": "model.studyDesign.design==(\"case_control\")"
+                  },
+                  {
+                    "key": "studyDesign.PercentageOfMissingDataOutcomeQAT",
+                    "condition": "model.studyDesign.design==(\"cross_sectional\")"
+                  },
+                  {
+                    "key": "studyDesign.PercentageOfMissingDataOutcomeQAT",
+                    "condition": "model.studyDesign.design==(\"cohort\")"
+                  },
+                  {
+                    "key": "studyDesign.PatternOfMissingDataQAT",
+                    "condition": "model.studyDesign.design==(\"case_control\")"
+                  },
+                  {
+                    "key": "studyDesign.PatternOfMissingDataQAT",
+                    "condition": "model.studyDesign.design==(\"cross_sectional\")"
+                  },
+                  {
+                    "key": "studyDesign.PatternOfMissingDataQAT",
+                    "condition": "model.studyDesign.design==(\"cohort\")"
+                  },
+                  {
+                    "key": "studyDesign.RepresentativeSampleQAT",
+                    "description": "t(If applicable)",
+                    "condition": "model.studyDesign.design==(\"case_control\")"
+                  },
+                  {
+                    "key": "studyDesign.IncidenceQAT",
+                    "condition": "model.studyDesign.design==(\"case_control\")"
+                  },
+                  {
+                    "key": "studyDesign.ControlsQAT",
+                    "condition": "model.studyDesign.design==(\"case_control\")"
+                  },
+                  {
+                    "key": "studyDesign.RandomSelectionQAT",
+                    "condition": "model.studyDesign.design==(\"cross_sectional\")"
+                  },
+                  {
+                    "key": "studyDesign.RepresentativeSampleQAT",
+                    "condition": "model.studyDesign.design==(\"cross_sectional\")"
+                  },
+                  {
+                    "key": "studyDesign.RandomSelectionQAT",
+                    "condition": "model.studyDesign.design==(\"cohort\")"
+                  },
+                  {
+                    "key": "studyDesign.RepresentativeSampleQAT",
+                    "description": "t(If applicable)",
+                    "condition": "model.studyDesign.design==(\"cohort\")"
+                  },
+                  {
+                    "key": "studyDesign.IncidenceQAT",
+                    "condition": "model.studyDesign.design==(\"cohort\")"
+                  },
+                  {
+                    "key": "studyDesign.LostToFollowupQAT",
+                    "condition": "model.studyDesign.design==(\"cohort\")"
+                  },
                   {
                     "key": "studyDesign.otherDesign",
                     "condition": "model.studyDesign.design==\"other\""
@@ -438,6 +560,7 @@
           {
             "key": "assay.foodTypes",
             "description": "The types of food assessed.",
+            "type": "radios",
             "titleMap": [
               {
                 "value": "food",
@@ -455,27 +578,59 @@
           },
           {
             "key": "assay.anthropometry",
-            "description": "The anthropometry measurements.",
-            "titleMap": [
+            "items": [
               {
-                "value": "weight",
-                "name": "weight"
+                "key": "assay.anthropometry.measurements",
+                "notitle": true,
+                "description": "The anthropometry measurements.",
+                "titleMap": [
+                  {
+                    "value": "weight",
+                    "name": "weight"
+                  },
+                  {
+                    "value": "height",
+                    "name": "height"
+                  },
+                  {
+                    "value": "waist_circumference",
+                    "name": "waist circumference"
+                  },
+                  {
+                    "value": "bmi_status",
+                    "name": "BMI status (categories)"
+                  },
+                  {
+                    "value": "body_fat",
+                    "name": "% body fat"
+                  }
+                ]
               },
               {
-                "value": "height",
-                "name": "height"
-              },
-              {
-                "value": "waist_circumference",
-                "name": "waist circumference"
-              },
-              {
-                "value": "bmi_status",
-                "name": "BMI status (categories)"
-              },
-              {
-                "value": "body_fat",
-                "name": "% body fat"
+                "type": "section",
+                "htmlClass": "hoffset3",
+                "items": [
+                  {
+                    "key": "assay.anthropometry.WeightQAT",
+                    "condition": "model.assay.anthropometry.measurements.indexOf(\"weight\")>=0"
+                  },
+                  {
+                    "key": "assay.anthropometry.HeightQAT",
+                    "condition": "model.assay.anthropometry.measurements.indexOf(\"height\")>=0"
+                  },
+                  {
+                    "key": "assay.anthropometry.WaistCircumferenceQAT",
+                    "condition": "model.assay.anthropometry.measurements.indexOf(\"waist_circumference\")>=0"
+                  },
+                  {
+                    "key": "assay.anthropometry.BMIQAT",
+                    "condition": "model.assay.anthropometry.measurements.indexOf(\"bmi_status\")>=0"
+                  },
+                  {
+                    "key": "assay.anthropometry.WholeBodyAdiposityQAT",
+                    "condition": "model.assay.anthropometry.measurements.indexOf(\"body_fat\")>=0"
+                  }
+                ]
               }
             ]
           },
@@ -635,6 +790,274 @@
               {
                 "key": "assay.assessment.other",
                 "condition": "model.assay.assessment.methods.indexOf(\"other\")>=0"
+              },
+              {
+                "key": "assay.assessment.TypeOfAdministrationQAT",
+                "condition": "model.assay.assessment.methods.indexOf(\"dietary_records\")>=0"
+              },
+              {
+                "key": "assay.assessment.OriginOfTheQuestionnaireQAT",
+                "condition": "model.assay.assessment.methods.indexOf(\"dietary_records\")>=0"
+              },
+              {
+                "key": "assay.assessment.ContentValidityOfQuestionnaireAssessedQAT",
+                "condition": "model.assay.assessment.methods.indexOf(\"dietary_records\")>=0"
+              },
+              {
+                "key": "assay.assessment.ReferenceOfTheValidationQAT",
+                "condition": "model.assay.assessment.methods.indexOf(\"dietary_records\")>=0"
+              },
+              {
+                "key": "assay.assessment.ValidatedElementsQAT",
+                "condition": "model.assay.assessment.methods.indexOf(\"dietary_records\")>=0"
+              },
+              {
+                "key": "assay.assessment.TypeOfValidationQAT",
+                "condition": "model.assay.assessment.methods.indexOf(\"dietary_records\")>=0"
+              },
+              {
+                "key": "assay.assessment.RepresentativenessOfSeasonsQAT",
+                "condition": "model.assay.assessment.methods.indexOf(\"dietary_records\")>=0"
+              },
+              {
+                "key": "assay.assessment.QuantificationOfPortionSizesQAT",
+                "condition": "model.assay.assessment.methods.indexOf(\"dietary_records\")>=0"
+              },
+              {
+                "key": "assay.assessment.DescriptionOfFoodIntakeDataQAT",
+                "condition": "model.assay.assessment.methods.indexOf(\"dietary_records\")>=0"
+              },
+              {
+                "key": "assay.assessment.GeographicallySpecificFoodCompositionDataQAT",
+                "condition": "model.assay.assessment.methods.indexOf(\"dietary_records\")>=0"
+              },
+              {
+                "key": "assay.assessment.MatchingData1QAT",
+                "condition": "model.assay.assessment.methods.indexOf(\"dietary_records\")>=0"
+              },
+              {
+                "key": "assay.assessment.MatchingData2QAT",
+                "condition": "model.assay.assessment.methods.indexOf(\"dietary_records\")>=0"
+              },
+              {
+                "key": "assay.assessment.MatchingData3QAT",
+                "condition": "model.assay.assessment.methods.indexOf(\"dietary_records\")>=0"
+              },
+              {
+                "key": "assay.assessment.MatchingData4QAT",
+                "condition": "model.assay.assessment.methods.indexOf(\"dietary_records\")>=0"
+              },
+              {
+                "key": "assay.assessment.RepresentativenessWeekDaysQAT",
+                "condition": "model.assay.assessment.methods.indexOf(\"dietary_records\")>=0"
+              },
+              {
+                "key": "assay.assessment.NumberOfDaysOfRecallQAT",
+                "condition": "model.assay.assessment.methods.indexOf(\"dietary_records\")>=0"
+              },
+              {
+                "key": "assay.assessment.SelectionOfRecallDaysQAT",
+                "condition": "model.assay.assessment.methods.indexOf(\"dietary_records\")>=0"
+              },
+              {
+                "key": "assay.assessment.TheTimeOfDietRecordsQAT",
+                "condition": "model.assay.assessment.methods.indexOf(\"dietary_records\")>=0"
+              },
+              {
+                "key": "assay.assessment.TypeOfAdministrationQAT",
+                "condition": "model.assay.assessment.methods.indexOf(\"24_hour_recall\")>=0"
+              },
+              {
+                "key": "assay.assessment.OriginOfTheQuestionnaireQAT",
+                "condition": "model.assay.assessment.methods.indexOf(\"24_hour_recall\")>=0"
+              },
+              {
+                "key": "assay.assessment.ContentValidityOfQuestionnaireAssessedQAT",
+                "condition": "model.assay.assessment.methods.indexOf(\"24_hour_recall\")>=0"
+              },
+              {
+                "key": "assay.assessment.ReferenceOfTheValidationQAT",
+                "condition": "model.assay.assessment.methods.indexOf(\"24_hour_recall\")>=0"
+              },
+              {
+                "key": "assay.assessment.ValidatedElementsQAT",
+                "condition": "model.assay.assessment.methods.indexOf(\"24_hour_recall\")>=0"
+              },
+              {
+                "key": "assay.assessment.TypeOfValidationQAT",
+                "condition": "model.assay.assessment.methods.indexOf(\"24_hour_recall\")>=0"
+              },
+              {
+                "key": "assay.assessment.RepresentativenessOfSeasonsQAT",
+                "condition": "model.assay.assessment.methods.indexOf(\"24_hour_recall\")>=0"
+              },
+              {
+                "key": "assay.assessment.QuantificationOfPortionSizesQAT",
+                "condition": "model.assay.assessment.methods.indexOf(\"24_hour_recall\")>=0"
+              },
+              {
+                "key": "assay.assessment.DescriptionOfFoodIntakeDataQAT",
+                "condition": "model.assay.assessment.methods.indexOf(\"24_hour_recall\")>=0"
+              },
+              {
+                "key": "assay.assessment.GeographicallySpecificFoodCompositionDataQAT",
+                "condition": "model.assay.assessment.methods.indexOf(\"24_hour_recall\")>=0"
+              },
+              {
+                "key": "assay.assessment.MatchingData1QAT",
+                "condition": "model.assay.assessment.methods.indexOf(\"24_hour_recall\")>=0"
+              },
+              {
+                "key": "assay.assessment.MatchingData2QAT",
+                "condition": "model.assay.assessment.methods.indexOf(\"24_hour_recall\")>=0"
+              },
+              {
+                "key": "assay.assessment.MatchingData3QAT",
+                "condition": "model.assay.assessment.methods.indexOf(\"24_hour_recall\")>=0"
+              },
+              {
+                "key": "assay.assessment.MatchingData4QAT",
+                "condition": "model.assay.assessment.methods.indexOf(\"24_hour_recall\")>=0"
+              },
+              {
+                "key": "assay.assessment.RepresentativenessWeekDaysQAT",
+                "condition": "model.assay.assessment.methods.indexOf(\"24_hour_recall\")>=0"
+              },
+              {
+                "key": "assay.assessment.NumberOfDaysOfRecallQAT",
+                "condition": "model.assay.assessment.methods.indexOf(\"24_hour_recall\")>=0"
+              },
+              {
+                "key": "assay.assessment.SelectionOfRecallDaysQAT",
+                "condition": "model.assay.assessment.methods.indexOf(\"24_hour_recall\")>=0"
+              },
+              {
+                "key": "assay.assessment.TypeOfAdministrationQAT",
+                "condition": "model.assay.assessment.methods.indexOf(\"screener\")>=0"
+              },
+              {
+                "key": "assay.assessment.OriginOfTheQuestionnaireQAT",
+                "condition": "model.assay.assessment.methods.indexOf(\"screener\")>=0"
+              },
+              {
+                "key": "assay.assessment.ContentValidityOfQuestionnaireAssessedQAT",
+                "condition": "model.assay.assessment.methods.indexOf(\"screener\")>=0"
+              },
+              {
+                "key": "assay.assessment.ReferenceOfTheValidationQAT",
+                "condition": "model.assay.assessment.methods.indexOf(\"screener\")>=0"
+              },
+              {
+                "key": "assay.assessment.ValidatedElementsQAT",
+                "condition": "model.assay.assessment.methods.indexOf(\"screener\")>=0"
+              },
+              {
+                "key": "assay.assessment.TypeOfValidationQAT",
+                "condition": "model.assay.assessment.methods.indexOf(\"screener\")>=0"
+              },
+              {
+                "key": "assay.assessment.RepresentativenessOfSeasonsQAT",
+                "condition": "model.assay.assessment.methods.indexOf(\"screener\")>=0"
+              },
+              {
+                "key": "assay.assessment.QuantificationOfPortionSizesQAT",
+                "condition": "model.assay.assessment.methods.indexOf(\"screener\")>=0"
+              },
+              {
+                "key": "assay.assessment.DescriptionOfFoodIntakeDataQAT",
+                "condition": "model.assay.assessment.methods.indexOf(\"screener\")>=0"
+              },
+              {
+                "key": "assay.assessment.GeographicallySpecificFoodCompositionDataQAT",
+                "condition": "model.assay.assessment.methods.indexOf(\"screener\")>=0"
+              },
+              {
+                "key": "assay.assessment.MatchingData1QAT",
+                "condition": "model.assay.assessment.methods.indexOf(\"screener\")>=0"
+              },
+              {
+                "key": "assay.assessment.MatchingData2QAT",
+                "condition": "model.assay.assessment.methods.indexOf(\"screener\")>=0"
+              },
+              {
+                "key": "assay.assessment.MatchingData3QAT",
+                "condition": "model.assay.assessment.methods.indexOf(\"screener\")>=0"
+              },
+              {
+                "key": "assay.assessment.MatchingData4QAT",
+                "condition": "model.assay.assessment.methods.indexOf(\"screener\")>=0"
+              },
+              {
+                "key": "assay.assessment.TheTimeOfDietRecordsQAT",
+                "condition": "model.assay.assessment.methods.indexOf(\"screener\")>=0"
+              },
+              {
+                "key": "assay.assessment.CustomizedFoodQAT",
+                "condition": "model.assay.assessment.methods.indexOf(\"screener\")>=0"
+              },
+              {
+                "key": "assay.assessment.TypeOfAdministrationQAT",
+                "condition": "model.assay.assessment.methods.indexOf(\"diet_history\")>=0"
+              },
+              {
+                "key": "assay.assessment.OriginOfTheQuestionnaireQAT",
+                "condition": "model.assay.assessment.methods.indexOf(\"diet_history\")>=0"
+              },
+              {
+                "key": "assay.assessment.ContentValidityOfQuestionnaireAssessedQAT",
+                "condition": "model.assay.assessment.methods.indexOf(\"diet_history\")>=0"
+              },
+              {
+                "key": "assay.assessment.ReferenceOfTheValidationQAT",
+                "condition": "model.assay.assessment.methods.indexOf(\"diet_history\")>=0"
+              },
+              {
+                "key": "assay.assessment.ValidatedElementsQAT",
+                "condition": "model.assay.assessment.methods.indexOf(\"diet_history\")>=0"
+              },
+              {
+                "key": "assay.assessment.TypeOfValidationQAT",
+                "condition": "model.assay.assessment.methods.indexOf(\"diet_history\")>=0"
+              },
+              {
+                "key": "assay.assessment.RepresentativenessOfSeasonsQAT",
+                "condition": "model.assay.assessment.methods.indexOf(\"diet_history\")>=0"
+              },
+              {
+                "key": "assay.assessment.QuantificationOfPortionSizesQAT",
+                "condition": "model.assay.assessment.methods.indexOf(\"diet_history\")>=0"
+              },
+              {
+                "key": "assay.assessment.DescriptionOfFoodIntakeDataQAT",
+                "condition": "model.assay.assessment.methods.indexOf(\"diet_history\")>=0"
+              },
+              {
+                "key": "assay.assessment.GeographicallySpecificFoodCompositionDataQAT",
+                "condition": "model.assay.assessment.methods.indexOf(\"diet_history\")>=0"
+              },
+              {
+                "key": "assay.assessment.MatchingDataQAT",
+                "condition": "model.assay.assessment.methods.indexOf(\"diet_history\")>=0"
+              },
+              {
+                "key": "assay.assessment.RepresentativenessWeekDaysQAT",
+                "condition": "model.assay.assessment.methods.indexOf(\"diet_history\")>=0"
+              },
+              {
+                "key": "assay.assessment.NumberOfDaysOfRecallQAT",
+                "condition": "model.assay.assessment.methods.indexOf(\"diet_history\")>=0"
+              },
+              {
+                "key": "assay.assessment.SelectionOfRecallDaysQAT",
+                "condition": "model.assay.assessment.methods.indexOf(\"diet_history\")>=0"
+              },
+              {
+                "key": "assay.assessment.TheTimeOfDietRecordsQAT",
+                "condition": "model.assay.assessment.methods.indexOf(\"diet_history\")>=0"
+              },
+              {
+                "key": "assay.assessment.CustomizedFoodQAT",
+                "condition": "model.assay.assessment.methods.indexOf(\"diet_history\")>=0"
               }
             ]
           }
@@ -851,461 +1274,6 @@
                 "condition": "model.assay.samples.types.indexOf(\"other\")>=0"
               }
             ]
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "type": "help",
-    "helpvalue": "<h3>t(Data quality descriptors)</h3>"
-  },
-  {
-    "type": "section",
-    "htmlClass": "row",
-    "items": [
-      {
-        "type": "section",
-        "htmlClass": "col-xs-6",
-        "items": [
-          {
-            "key": "LinkQAT",
-            "notitle": true,
-            "description": "t(Data quality description)"
-          },
-          {
-            "key": "StudyDesignQAT",
-            "type": "radios",
-            "condition": "model.LinkQAT.indexOf(\"Study design\")>=0"
-          },
-          {
-            "key": "DietaryMeasurementQAT",
-            "type": "radios",
-            "condition": "model.LinkQAT.indexOf(\"Measurement: dietary intake\")>=0"
-          }
-        ]
-      },
-      {
-        "type": "section",
-        "htmlClass": "col-xs-6",
-        "items": [
-          {
-            "key": "ResponseRateQAT",
-            "condition": "model.StudyDesignQAT.indexOf(\"Case-control study\")>=0"
-          },
-          {
-            "key": "ResponseRateQAT",
-            "condition": "model.StudyDesignQAT.indexOf(\"Cross-sectional study\")>=0"
-          },
-          {
-            "key": "ResponseRateQAT",
-            "condition": "model.StudyDesignQAT.indexOf(\"Cohort study\")>=0"
-          },
-          {
-            "key": "ResponseRateQATFillin",
-            "condition": "model.ResponseRateQAT.indexOf(\"Response rate\")>=0"
-          },
-          {
-            "key": "CooperationRateFillin",
-            "condition": "model.ResponseRateQAT.indexOf(\"Cooperation rate\")>=0"
-          },
-          {
-            "key": "CovariatesAndConfoundingFactorsQAT",
-            "condition": "model.StudyDesignQAT.indexOf(\"Case-control study\")>=0"
-          },
-          {
-            "key": "CovariatesAndConfoundingFactorsQAT",
-            "condition": "model.StudyDesignQAT.indexOf(\"Cross-sectional study\")>=0"
-          },
-          {
-            "key": "CovariatesAndConfoundingFactorsQAT",
-            "condition": "model.StudyDesignQAT.indexOf(\"Cohort study\")>=0"
-          },
-          {
-            "key": "ConfirmedDiagnosisQAT",
-            "condition": "model.StudyDesignQAT.indexOf(\"Case-control study\")>=0"
-          },
-          {
-            "key": "ConfirmedDiagnosisQAT",
-            "condition": "model.StudyDesignQAT.indexOf(\"Cross-sectional study\")>=0"
-          },
-          {
-            "key": "ConfirmedDiagnosisQAT",
-            "condition": "model.StudyDesignQAT.indexOf(\"Cohort study\")>=0"
-          },
-          {
-            "key": "DiagnosisMethodQAT",
-            "condition": "model.ConfirmedDiagnosisQAT.indexOf(\"Yes, method used for confirming diagnosis\")>=0"
-          },
-          {
-            "key": "PercentageOfMissingDataExposureQAT",
-            "condition": "model.StudyDesignQAT.indexOf(\"Case-control study\")>=0"
-          },
-          {
-            "key": "PercentageOfMissingDataExposureQAT",
-            "condition": "model.StudyDesignQAT.indexOf(\"Cross-sectional study\")>=0"
-          },
-          {
-            "key": "PercentageOfMissingDataExposureQAT",
-            "condition": "model.StudyDesignQAT.indexOf(\"Cohort study\")>=0"
-          },
-          {
-            "key": "PercentageOfMissingDataOutcomeQAT",
-            "condition": "model.StudyDesignQAT.indexOf(\"Case-control study\")>=0"
-          },
-          {
-            "key": "PercentageOfMissingDataOutcomeQAT",
-            "condition": "model.StudyDesignQAT.indexOf(\"Cross-sectional study\")>=0"
-          },
-          {
-            "key": "PercentageOfMissingDataOutcomeQAT",
-            "condition": "model.StudyDesignQAT.indexOf(\"Cohort study\")>=0"
-          },
-          {
-            "key": "PatternOfMissingDataQAT",
-            "condition": "model.StudyDesignQAT.indexOf(\"Case-control study\")>=0"
-          },
-          {
-            "key": "PatternOfMissingDataQAT",
-            "condition": "model.StudyDesignQAT.indexOf(\"Cross-sectional study\")>=0"
-          },
-          {
-            "key": "PatternOfMissingDataQAT",
-            "condition": "model.StudyDesignQAT.indexOf(\"Cohort study\")>=0"
-          },
-          {
-            "key": "RepresentativeSampleQAT",
-            "description": "t(If applicable)",
-            "condition": "model.StudyDesignQAT.indexOf(\"Case-control study\")>=0"
-          },
-          {
-            "key": "IncidenceQAT",
-            "condition": "model.StudyDesignQAT.indexOf(\"Case-control study\")>=0"
-          },
-          {
-            "key": "ControlsQAT",
-            "condition": "model.StudyDesignQAT.indexOf(\"Case-control study\")>=0"
-          },
-          {
-            "key": "RandomSelectionQAT",
-            "condition": "model.StudyDesignQAT.indexOf(\"Cross-sectional study\")>=0"
-          },
-          {
-            "key": "RepresentativeSampleQAT",
-            "condition": "model.StudyDesignQAT.indexOf(\"Cross-sectional study\")>=0"
-          },
-          {
-            "key": "RandomSelectionQAT",
-            "condition": "model.StudyDesignQAT.indexOf(\"Cohort study\")>=0"
-          },
-          {
-            "key": "RepresentativeSampleQAT",
-            "description": "t(If applicable)",
-            "condition": "model.StudyDesignQAT.indexOf(\"Cohort study\")>=0"
-          },
-          {
-            "key": "IncidenceQAT",
-            "condition": "model.StudyDesignQAT.indexOf(\"Cohort study\")>=0"
-          },
-          {
-            "key": "LostToFollowupQAT",
-            "condition": "model.StudyDesignQAT.indexOf(\"Cohort study\")>=0"
-          },
-          {
-            "key": "TypeOfAdministrationQAT",
-            "condition": "model.DietaryMeasurementQAT.indexOf(\"Dietary record\")>=0"
-          },
-          {
-            "key": "OriginOfTheQuestionnaireQAT",
-            "condition": "model.DietaryMeasurementQAT.indexOf(\"Dietary record\")>=0"
-          },
-          {
-            "key": "ContentValidityOfQuestionnaireAssessedQAT",
-            "condition": "model.DietaryMeasurementQAT.indexOf(\"Dietary record\")>=0"
-          },
-          {
-            "key": "ReferenceOfTheValidationQAT",
-            "condition": "model.DietaryMeasurementQAT.indexOf(\"Dietary record\")>=0"
-          },
-          {
-            "key": "ValidatedElementsQAT",
-            "condition": "model.DietaryMeasurementQAT.indexOf(\"Dietary record\")>=0"
-          },
-          {
-            "key": "TypeOfValidationQAT",
-            "condition": "model.DietaryMeasurementQAT.indexOf(\"Dietary record\")>=0"
-          },
-          {
-            "key": "RepresentativenessOfSeasonsQAT",
-            "condition": "model.DietaryMeasurementQAT.indexOf(\"Dietary record\")>=0"
-          },
-          {
-            "key": "QuantificationOfPortionSizesQAT",
-            "condition": "model.DietaryMeasurementQAT.indexOf(\"Dietary record\")>=0"
-          },
-          {
-            "key": "DescriptionOfFoodIntakeDataQAT",
-            "condition": "model.DietaryMeasurementQAT.indexOf(\"Dietary record\")>=0"
-          },
-          {
-            "key": "GeographicallySpecificFoodCompositionDataQAT",
-            "condition": "model.DietaryMeasurementQAT.indexOf(\"Dietary record\")>=0"
-          },
-          {
-            "key": "MatchingData1QAT",
-            "condition": "model.DietaryMeasurementQAT.indexOf(\"Dietary record\")>=0"
-          },
-          {
-            "key": "MatchingData2QAT",
-            "condition": "model.DietaryMeasurementQAT.indexOf(\"Dietary record\")>=0"
-          },
-          {
-            "key": "MatchingData3QAT",
-            "condition": "model.DietaryMeasurementQAT.indexOf(\"Dietary record\")>=0"
-          },
-          {
-            "key": "MatchingData4QAT",
-            "condition": "model.DietaryMeasurementQAT.indexOf(\"Dietary record\")>=0"
-          },
-          {
-            "key": "RepresentativenessWeekDaysQAT",
-            "condition": "model.DietaryMeasurementQAT.indexOf(\"Dietary record\")>=0"
-          },
-          {
-            "key": "NumberOfDaysOfRecallQAT",
-            "condition": "model.DietaryMeasurementQAT.indexOf(\"Dietary record\")>=0"
-          },
-          {
-            "key": "SelectionOfRecallDaysQAT",
-            "condition": "model.DietaryMeasurementQAT.indexOf(\"Dietary record\")>=0"
-          },
-          {
-            "key": "TheTimeOfDietRecordsQAT",
-            "condition": "model.DietaryMeasurementQAT.indexOf(\"Dietary record\")>=0"
-          },
-          {
-            "key": "TypeOfAdministrationQAT",
-            "condition": "model.DietaryMeasurementQAT.indexOf(\"24-hour recall\")>=0"
-          },
-          {
-            "key": "OriginOfTheQuestionnaireQAT",
-            "condition": "model.DietaryMeasurementQAT.indexOf(\"24-hour recall\")>=0"
-          },
-          {
-            "key": "ContentValidityOfQuestionnaireAssessedQAT",
-            "condition": "model.DietaryMeasurementQAT.indexOf(\"24-hour recall\")>=0"
-          },
-          {
-            "key": "ReferenceOfTheValidationQAT",
-            "condition": "model.DietaryMeasurementQAT.indexOf(\"24-hour recall\")>=0"
-          },
-          {
-            "key": "ValidatedElementsQAT",
-            "condition": "model.DietaryMeasurementQAT.indexOf(\"24-hour recall\")>=0"
-          },
-          {
-            "key": "TypeOfValidationQAT",
-            "condition": "model.DietaryMeasurementQAT.indexOf(\"24-hour recall\")>=0"
-          },
-          {
-            "key": "RepresentativenessOfSeasonsQAT",
-            "condition": "model.DietaryMeasurementQAT.indexOf(\"24-hour recall\")>=0"
-          },
-          {
-            "key": "QuantificationOfPortionSizesQAT",
-            "condition": "model.DietaryMeasurementQAT.indexOf(\"24-hour recall\")>=0"
-          },
-          {
-            "key": "DescriptionOfFoodIntakeDataQAT",
-            "condition": "model.DietaryMeasurementQAT.indexOf(\"24-hour recall\")>=0"
-          },
-          {
-            "key": "GeographicallySpecificFoodCompositionDataQAT",
-            "condition": "model.DietaryMeasurementQAT.indexOf(\"24-hour recall\")>=0"
-          },
-          {
-            "key": "MatchingData1QAT",
-            "condition": "model.DietaryMeasurementQAT.indexOf(\"24-hour recall\")>=0"
-          },
-          {
-            "key": "MatchingData2QAT",
-            "condition": "model.DietaryMeasurementQAT.indexOf(\"24-hour recall\")>=0"
-          },
-          {
-            "key": "MatchingData3QAT",
-            "condition": "model.DietaryMeasurementQAT.indexOf(\"24-hour recall\")>=0"
-          },
-          {
-            "key": "MatchingData4QAT",
-            "condition": "model.DietaryMeasurementQAT.indexOf(\"24-hour recall\")>=0"
-          },
-          {
-            "key": "RepresentativenessWeekDaysQAT",
-            "condition": "model.DietaryMeasurementQAT.indexOf(\"24-hour recall\")>=0"
-          },
-          {
-            "key": "NumberOfDaysOfRecallQAT",
-            "condition": "model.DietaryMeasurementQAT.indexOf(\"24-hour recall\")>=0"
-          },
-          {
-            "key": "SelectionOfRecallDaysQAT",
-            "condition": "model.DietaryMeasurementQAT.indexOf(\"24-hour recall\")>=0"
-          },
-          {
-            "key": "TypeOfAdministrationQAT",
-            "condition": "model.DietaryMeasurementQAT.indexOf(\"FFQ/screener\")>=0"
-          },
-          {
-            "key": "OriginOfTheQuestionnaireQAT",
-            "condition": "model.DietaryMeasurementQAT.indexOf(\"FFQ/screener\")>=0"
-          },
-          {
-            "key": "ContentValidityOfQuestionnaireAssessedQAT",
-            "condition": "model.DietaryMeasurementQAT.indexOf(\"FFQ/screener\")>=0"
-          },
-          {
-            "key": "ReferenceOfTheValidationQAT",
-            "condition": "model.DietaryMeasurementQAT.indexOf(\"FFQ/screener\")>=0"
-          },
-          {
-            "key": "ValidatedElementsQAT",
-            "condition": "model.DietaryMeasurementQAT.indexOf(\"FFQ/screener\")>=0"
-          },
-          {
-            "key": "TypeOfValidationQAT",
-            "condition": "model.DietaryMeasurementQAT.indexOf(\"FFQ/screener\")>=0"
-          },
-          {
-            "key": "RepresentativenessOfSeasonsQAT",
-            "condition": "model.DietaryMeasurementQAT.indexOf(\"FFQ/screener\")>=0"
-          },
-          {
-            "key": "QuantificationOfPortionSizesQAT",
-            "condition": "model.DietaryMeasurementQAT.indexOf(\"FFQ/screener\")>=0"
-          },
-          {
-            "key": "DescriptionOfFoodIntakeDataQAT",
-            "condition": "model.DietaryMeasurementQAT.indexOf(\"FFQ/screener\")>=0"
-          },
-          {
-            "key": "GeographicallySpecificFoodCompositionDataQAT",
-            "condition": "model.DietaryMeasurementQAT.indexOf(\"FFQ/screener\")>=0"
-          },
-          {
-            "key": "MatchingData1QAT",
-            "condition": "model.DietaryMeasurementQAT.indexOf(\"FFQ/screener\")>=0"
-          },
-          {
-            "key": "MatchingData2QAT",
-            "condition": "model.DietaryMeasurementQAT.indexOf(\"FFQ/screener\")>=0"
-          },
-          {
-            "key": "MatchingData3QAT",
-            "condition": "model.DietaryMeasurementQAT.indexOf(\"FFQ/screener\")>=0"
-          },
-          {
-            "key": "MatchingData4QAT",
-            "condition": "model.DietaryMeasurementQAT.indexOf(\"FFQ/screener\")>=0"
-          },
-          {
-            "key": "TheTimeOfDietRecordsQAT",
-            "condition": "model.DietaryMeasurementQAT.indexOf(\"FFQ/screener\")>=0"
-          },
-          {
-            "key": "CustomizedFoodQAT",
-            "condition": "model.DietaryMeasurementQAT.indexOf(\"FFQ/screener\")>=0"
-          },
-          {
-            "key": "TypeOfAdministrationQAT",
-            "condition": "model.DietaryMeasurementQAT.indexOf(\"Dietary history\")>=0"
-          },
-          {
-            "key": "OriginOfTheQuestionnaireQAT",
-            "condition": "model.DietaryMeasurementQAT.indexOf(\"Dietary history\")>=0"
-          },
-          {
-            "key": "ContentValidityOfQuestionnaireAssessedQAT",
-            "condition": "model.DietaryMeasurementQAT.indexOf(\"Dietary history\")>=0"
-          },
-          {
-            "key": "ReferenceOfTheValidationQAT",
-            "condition": "model.DietaryMeasurementQAT.indexOf(\"Dietary history\")>=0"
-          },
-          {
-            "key": "ValidatedElementsQAT",
-            "condition": "model.DietaryMeasurementQAT.indexOf(\"Dietary history\")>=0"
-          },
-          {
-            "key": "TypeOfValidationQAT",
-            "condition": "model.DietaryMeasurementQAT.indexOf(\"Dietary history\")>=0"
-          },
-          {
-            "key": "RepresentativenessOfSeasonsQAT",
-            "condition": "model.DietaryMeasurementQAT.indexOf(\"Dietary history\")>=0"
-          },
-          {
-            "key": "QuantificationOfPortionSizesQAT",
-            "condition": "model.DietaryMeasurementQAT.indexOf(\"Dietary history\")>=0"
-          },
-          {
-            "key": "DescriptionOfFoodIntakeDataQAT",
-            "condition": "model.DietaryMeasurementQAT.indexOf(\"Dietary history\")>=0"
-          },
-          {
-            "key": "GeographicallySpecificFoodCompositionDataQAT",
-            "condition": "model.DietaryMeasurementQAT.indexOf(\"Dietary history\")>=0"
-          },
-          {
-            "key": "MatchingDataQAT",
-            "condition": "model.DietaryMeasurementQAT.indexOf(\"Dietary history\")>=0"
-          },
-          {
-            "key": "RepresentativenessWeekDaysQAT",
-            "condition": "model.DietaryMeasurementQAT.indexOf(\"Dietary history\")>=0"
-          },
-          {
-            "key": "NumberOfDaysOfRecallQAT",
-            "condition": "model.DietaryMeasurementQAT.indexOf(\"Dietary history\")>=0"
-          },
-          {
-            "key": "SelectionOfRecallDaysQAT",
-            "condition": "model.DietaryMeasurementQAT.indexOf(\"Dietary history\")>=0"
-          },
-          {
-            "key": "TheTimeOfDietRecordsQAT",
-            "condition": "model.DietaryMeasurementQAT.indexOf(\"Dietary history\")>=0"
-          },
-          {
-            "key": "CustomizedFoodQAT",
-            "condition": "model.DietaryMeasurementQAT.indexOf(\"Dietary history\")>=0"
-          },
-          {
-            "key": "Anthropometry",
-            "condition": "model.LinkQAT.indexOf(\"Measurement: anthropometry\")>=0"
-          },
-          {
-            "key": "trainingOfAssessorsQAT",
-            "condition": "model.Anthropometry.indexOf(\"Training of assessors\")>=0"
-          },
-          {
-            "key": "WeightQAT",
-            "condition": "model.Anthropometry.indexOf(\"Weight\")>=0"
-          },
-          {
-            "key": "HeightQAT",
-            "condition": "model.Anthropometry.indexOf(\"Height\")>=0"
-          },
-          {
-            "key": "WaistCircumferenceQAT",
-            "condition": "model.Anthropometry.indexOf(\"Waist circumference\")>=0"
-          },
-          {
-            "key": "BMIQAT",
-            "condition": "model.Anthropometry.indexOf(\"BMI status (categories)\")>=0"
-          },
-          {
-            "key": "WholeBodyAdiposityQAT",
-            "condition": "model.Anthropometry.indexOf(\"Whole-body adiposity\")>=0"
           }
         ]
       }
