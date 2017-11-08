@@ -347,11 +347,10 @@
         },
         "anthropometry": {
           "type": "object",
-          "title": "Anthropometry",
           "properties": {
             "measurements": {
               "type": "array",
-              "notitle": true,
+              "title": "Anthropometry",
               "items": {
                 "type": "string",
                 "enum": [
@@ -562,7 +561,7 @@
             },
             "DescriptionOfFoodIntakeDataQAT": {
               "type": "string",
-              "title": "t(9. Description of food intake data (if 8 ¡Ù not quantified))",
+              "title": "t(9. Description of food intake data (if 8 ≠ not quantified))",
               "enum": [
                 "Food intake is directly expressed into units of weights or volume (for weighed Food record)",
                 "Food intake is converted from estimated portion sizes into units of weights or volume",
@@ -571,7 +570,7 @@
             },
             "GeographicallySpecificFoodCompositionDataQAT": {
               "type": "string",
-              "title": "t(10. Geographically specific food composition data (if 8 ¡Ù not quantified))",
+              "title": "t(10. Geographically specific food composition data (if 8 ≠ not quantified))",
               "enum": [
                 "Yes",
                 "No"
@@ -579,19 +578,19 @@
             },
             "MatchingData1QAT": {
               "type": "string",
-              "title": "t(11.1 Matching consumed food to referred food composition data, exact matching (%, if 8 ¡Ù not quantified))"
+              "title": "t(11.1 Matching consumed food to referred food composition data, exact matching (%, if 8 ≠ not quantified))"
             },
             "MatchingData2QAT": {
               "type": "string",
-              "title": "t(11.2 Food items matched to means of min.3 food items in the table (%, if 8 ¡Ù not quantified))"
+              "title": "t(11.2 Food items matched to means of min.3 food items in the table (%, if 8 ≠ not quantified))"
             },
             "MatchingData3QAT": {
               "type": "string",
-              "title": "t(11.3 Food items matched to same food items in the table with similar moisture content (%, if 8 ¡Ù not quantified))"
+              "title": "t(11.3 Food items matched to same food items in the table with similar moisture content (%, if 8 ≠ not quantified))"
             },
             "MatchingData4QAT": {
               "type": "string",
-              "title": "t(11.4 Food items matched to a different food (%, if 8 ¡Ù not quantified))"
+              "title": "t(11.4 Food items matched to a different food (%, if 8 ≠ not quantified))"
             },
             "RepresentativenessWeekDaysQAT": {
               "type": "string",

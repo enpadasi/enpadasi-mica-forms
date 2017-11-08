@@ -558,6 +558,71 @@
         "htmlClass": "col-xs-6",
         "items": [
           {
+            "key": "assay.anthropometry.measurements",
+            "notitle": true,
+            "description": "The anthropometry measurements.",
+            "titleMap": [
+              {
+                "value": "weight",
+                "name": "weight"
+              },
+              {
+                "value": "height",
+                "name": "height"
+              },
+              {
+                "value": "waist_circumference",
+                "name": "waist circumference"
+              },
+              {
+                "value": "bmi_status",
+                "name": "BMI status (categories)"
+              },
+              {
+                "value": "body_fat",
+                "name": "% body fat"
+              }
+            ]
+          },
+          {
+            "type": "section",
+            "htmlClass": "hoffset3",
+            "items": [
+              {
+                "key": "assay.anthropometry.WeightQAT",
+                "condition": "model.assay.anthropometry.measurements.indexOf(\"weight\")>=0"
+              },
+              {
+                "key": "assay.anthropometry.HeightQAT",
+                "condition": "model.assay.anthropometry.measurements.indexOf(\"height\")>=0"
+              },
+              {
+                "key": "assay.anthropometry.WaistCircumferenceQAT",
+                "condition": "model.assay.anthropometry.measurements.indexOf(\"waist_circumference\")>=0"
+              },
+              {
+                "key": "assay.anthropometry.BMIQAT",
+                "condition": "model.assay.anthropometry.measurements.indexOf(\"bmi_status\")>=0"
+              },
+              {
+                "key": "assay.anthropometry.WholeBodyAdiposityQAT",
+                "condition": "model.assay.anthropometry.measurements.indexOf(\"body_fat\")>=0"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "section",
+    "htmlClass": "row",
+    "items": [
+      {
+        "type": "section",
+        "htmlClass": "col-xs-6",
+        "items": [
+          {
             "key": "assay.foodTypes",
             "description": "The types of food assessed.",
             "type": "radios",
@@ -573,64 +638,6 @@
               {
                 "value": "dietary_supplements",
                 "name": "dietary supplements"
-              }
-            ]
-          },
-          {
-            "key": "assay.anthropometry",
-            "items": [
-              {
-                "key": "assay.anthropometry.measurements",
-                "notitle": true,
-                "description": "The anthropometry measurements.",
-                "titleMap": [
-                  {
-                    "value": "weight",
-                    "name": "weight"
-                  },
-                  {
-                    "value": "height",
-                    "name": "height"
-                  },
-                  {
-                    "value": "waist_circumference",
-                    "name": "waist circumference"
-                  },
-                  {
-                    "value": "bmi_status",
-                    "name": "BMI status (categories)"
-                  },
-                  {
-                    "value": "body_fat",
-                    "name": "% body fat"
-                  }
-                ]
-              },
-              {
-                "type": "section",
-                "htmlClass": "hoffset3",
-                "items": [
-                  {
-                    "key": "assay.anthropometry.WeightQAT",
-                    "condition": "model.assay.anthropometry.measurements.indexOf(\"weight\")>=0"
-                  },
-                  {
-                    "key": "assay.anthropometry.HeightQAT",
-                    "condition": "model.assay.anthropometry.measurements.indexOf(\"height\")>=0"
-                  },
-                  {
-                    "key": "assay.anthropometry.WaistCircumferenceQAT",
-                    "condition": "model.assay.anthropometry.measurements.indexOf(\"waist_circumference\")>=0"
-                  },
-                  {
-                    "key": "assay.anthropometry.BMIQAT",
-                    "condition": "model.assay.anthropometry.measurements.indexOf(\"bmi_status\")>=0"
-                  },
-                  {
-                    "key": "assay.anthropometry.WholeBodyAdiposityQAT",
-                    "condition": "model.assay.anthropometry.measurements.indexOf(\"body_fat\")>=0"
-                  }
-                ]
               }
             ]
           },
